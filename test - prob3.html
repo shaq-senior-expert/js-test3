@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Tracker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h2>Weather Tracker</h2>
+    <form>
+      <label for="week">Select Week:</label>
+      <select id="week">
+        <option value="1">Week 1</option>
+        <option value="2">Week 2</option>
+        <option value="3">Week 3</option>
+        <option value="4">Week 4</option>
+      </select>
+      <button type="button" onclick="getWeatherData()">Start Tracking</button>
+      <button type="button" onclick="generateXML()">Generate XML</button>
+      <button type="button" onclick="showChart()">Show Chart</button>
+    </form>
+    <div id="table-container"></div>
+    <div id="xml-message" style="display: none">
+      XML file generated successfully!
+    </div>
+    <div id="chart-container" style="display: none">
+      <canvas id="chart"></canvas>
+    </div>
+  </body>
+</html>
